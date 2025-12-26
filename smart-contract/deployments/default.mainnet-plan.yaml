@@ -10,7 +10,7 @@ plan:
       transactions:
         - contract-publish:
             contract-name: proof-of-attendance
-            expected-sender: SPN6QHTXYKBNYNS6765BTECXRSPYKC7B0M5KADMW
+            expected-sender: SP262DFWDS07XGFC8HYE4H7MAESRD6M6G1AS6K16Y
             cost: 26160
             path: contracts/proof-of-attendance.clar
             anchor-block-only: true
