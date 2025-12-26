@@ -79,3 +79,18 @@
     (ok true)
   )
 )
+
+;; read only functions
+;;
+
+(define-read-only (get-proof-event (event-id uint))
+  (map-get? events event-id)
+)
+
+(define-read-only (get-proof-record (event-id uint) (attendee principal))
+  (map-get? attendance {event-id: event-id, attendee: attendee})
+)
+
+(define-read-only (has-proof-of-attendance (event-id uint) (attendee principal))
+  (is-some (map-get? attendance {event-id: event-id, attendee: attendee}))
+)
